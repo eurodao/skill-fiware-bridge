@@ -3,7 +3,7 @@
 [![License: GPL-3.0-only](https://img.shields.io/badge/License-GPL--3.0--only-blue.svg)](LICENSE)
 ![Status: pre-release](https://img.shields.io/badge/status-pre--release-orange)
 
-A ROS 2 module that publishes skill, task-step and component events from a ROS 2 robot cell to FIWARE Orion-LD as NGSI-LD entities, with open data models for skills and execution traceability.
+A Python module that publishes skill, task-step and component events from a ROS 2 robot cell to FIWARE Orion-LD as NGSI-LD entities.
 
 > **Status:** this repository is being prepared. The first public release, with source code, installation guide and a runnable example, is planned for **June 2027**.
 
@@ -24,31 +24,20 @@ flowchart LR
 
 ## Features
 
-*To be completed with the first release.*
+- Publishes skill approvals, task steps and component events as NGSI-LD entities, live during a run.
+- Resumes after a restart without losing or duplicating events.
+- Open NGSI-LD data models for skills and execution traceability.
 
 ## Requirements
 
-*To be completed with the first release* (ROS 2 Jazzy on eProsima Vulcanexus; Ubuntu 24.04).
-
-## Installation
-
-*To be completed with the first release.*
+- **OS:** Ubuntu 24.04.
+- **Python:** 3.12.
+- **FIWARE:** Orion-LD context broker (NGSI-LD API).
+- **ROS 2:** Jazzy on the robot-cell side; the bridge itself does not need ROS 2.
 
 ## Usage
 
-*To be completed with the first release* — including a minimal "hello world" example and a basic demo.
-
-## Known limitations
-
-*To be completed with the first release.*
-
-## Third-party notices
-
-*To be completed with the first release.*
-
-## Contributing
-
-Issues and suggestions are welcome. Code contributions will be accepted after the first release. Contributors will be asked to sign a Contributor License Agreement that gives euroDAO SAS the right to relicense the contribution under GPL-3.0-only or under a later, more permissive licence.
+The bridge reads the event records written by the robot cell and writes them to an Orion-LD broker. Configuration, installation and a runnable example will be documented with the first release.
 
 ## License
 
